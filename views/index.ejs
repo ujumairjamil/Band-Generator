@@ -1,0 +1,25 @@
+<%- include("partials/solution-header.ejs") %>
+
+  <% if (locals.adjective && locals.noun) { %>
+    <h1>
+      <%= adjective %>
+        <%= noun %>
+    </h1>
+    <% } else { %>
+      <h1>Welcome to the Band Generator 🤟</h1>
+      <% } %>
+
+
+
+      <form action="/submitForm" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="Index1">Index1:</label>
+        <input type="number" id="index1" name="index1"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+
+        <%- include("partials/solution-footer.ejs") %>
